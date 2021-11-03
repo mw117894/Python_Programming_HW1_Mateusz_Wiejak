@@ -1,3 +1,4 @@
+n = 20
 def printPrimeNumbers(n):
     for i in range(n + 1):
         primeNumber = True
@@ -9,3 +10,4 @@ def printPrimeNumbers(n):
                         break
         if primeNumber and i > 1:
             print(i)
+printPrimeNumbers(n)
