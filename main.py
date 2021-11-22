@@ -1,13 +1,14 @@
-n = 20
-def printPrimeNumbers(n):
-    for i in range(n + 1):
-        primeNumber = True
-        if i > 1:
-            for a in range(i):
-                if a > 1:
-                    if i / a == i // a:
-                        primeNumber = False
-                        break
-        if primeNumber and i > 1:
-            print(i)
-printPrimeNumbers(n)
+print("Input how many prime numbers you would like to print")
+n = int(input())
+primeNumbers = []
+i = 1
+while len(primeNumbers) < n:
+    primeNumber = True
+    for a in range(2,i-1):
+        if i / a == i // a:
+            primeNumber = False
+            break
+    if primeNumber and i > 1:
+        primeNumbers.append(i)
+    i+=1
+print(primeNumbers)
